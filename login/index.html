@@ -4,14 +4,59 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>用户登录</title>
-<style type="text/css">
-    html{font-size:12px;}
-    fieldset{width:520px; margin: 0 auto;}
-    legend{font-weight:bold; font-size:14px;}
-    label{float:left; width:70px; margin-left:10px;}
-    .left{margin-left:80px;}
-    .input{width:150px;}
-    span{color: #666666;}
+<style>
+*{
+padding:0px;
+margin:0px;
+}
+a{
+	color: #F00
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-size: cover;
+	font-size: 13px;
+}
+img{
+border:0;
+}
+.lg{width:468px; height:468px; margin:100px auto; 
+background:url(image/bg2.png) no-repeat center;}
+.lg_top{ height:200px; width:468px;}
+.lg_main{width:400px; height:180px; margin:0 25px;}
+.lg_m_1{
+width:290px;
+height:100px;
+padding:60px 55px 20px 55px;
+}
+.ur{
+height:37px;
+border:0;
+color:#666;
+width:236px;
+margin:4px 28px;
+background:url(image/bg3.png) no-repeat;
+padding-left:10px;
+font-size:16pt;
+font-family:Arial, Helvetica, sans-serif;
+}
+.pw{
+height:37px;
+border:0;
+color:#666;
+width:236px;
+margin:4px 28px;
+background:url(image/bg4.png) no-repeat;
+padding-left:10px;
+font-size:16pt;
+font-family:Arial, Helvetica, sans-serif;
+}
+.bn{width:330px; height:72px; background:url(image/bg5.png) no-repeat; border:0; display:block; font-size:18px; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-weight:bolder;}
+.lg_foot{
+height:80px;
+width:330px;
+padding: 6px 68px 0 68px;
+}
 </style>
 <script language=JavaScript>
 <!--
@@ -35,25 +80,23 @@ function InputCheck(LoginForm)
 //-->
 </script>
 </head>
-<body>
-<div>
-<fieldset>
-<legend>用户登录</legend>
-<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)">
-<p>
-<label for="username" class="label">用户名:</label>
-<input id="username" name="username" type="text" class="input" />
-<p/>
-<p>
-<label for="password" class="label">密 码:</label>
-<input id="password" name="password" type="password" class="input" />
-<p/>
-<p>
-<input type="submit" name="submit" value="  确 定  " class="left" />
-</p>
-<p><a href="/MyPhpWebSite/login/reg.html">没有账号？点此处注册</a></p>
+<body class="b">
+<div class="lg">
+  <form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)">
+<div class="lg_top"></div>
+<div class="lg_main">
+<div class="lg_m_1">
+
+<input name="username" value="账号" class="ur" />
+<input name="password" type="password" value="密码" class="pw" />
+<div><a href="/MyPhpWebSite/login/reg.html">没有账号？点此处注册</a></div>
+</div>
+</div>
+<div class="lg_foot">
+<input type="submit" name="submit" value="点这里登录" class="bn" /></div>
 </form>
-</fieldset>
+</div>
+<div style="text-align:center;">
 </div>
 </body>
 </html>
