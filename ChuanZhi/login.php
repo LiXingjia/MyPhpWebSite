@@ -8,9 +8,6 @@
 <body>
 <?php
 session_start();
-//显示错误信息
-//ini_set('display_errors',1);
-//error_reporting(E_ALL|E_STATIC);
 //注销登录
 if($_GET["action"] == "logout"){
     unset($_SESSION['userid']);
